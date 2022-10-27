@@ -1,0 +1,174 @@
+footer {
+    height: 900px;
+}
+
+section {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =============== transform ================== */
+.transform1 {
+    transform: translateX(200px);
+}
+
+.transform2 {
+    /* transform: translateY(600px);
+    transform: translateX(200px) translateY(600px); */
+    /* transform: translate(x , y , z */
+    transform: translate(200px, 600px);
+}
+
+
+.transform3 {
+    width: 150px;
+    transform: translate(200%);
+}
+
+.transform4 {
+    margin-left: 150px;
+    /* transform: skewX(20deg);
+    transform: skewY(40deg); */
+    /* skew(x , y) */
+    transform: skew(20deg, 40deg)translateX(300px);
+}
+
+.transform5 {
+    margin-left: 100px;
+    transform: rotateZ(45deg) translateX(200px);
+}
+
+
+/* =============== transition ================== */
+
+
+.transition1 {
+    /* hier kann jede CSS property einzeln ausgewählt werden */
+    transition-property: width;
+    /* wie lange der effect dauern soll */
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.transition1:hover {
+    width: 300px;
+}
+
+.transition2 {
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    /* transition-delay: 3s; */
+}
+
+.transition2:hover {
+    width: 300px;
+}
+
+.transition3 {
+    /* transition: property duration timing-function delay */
+    transition: width 2s ease-in;
+}
+
+.transition3:hover {
+    width: 600px;
+}
+
+.transition4 {
+    transition: width 2s ease-in-out;
+}
+
+.transition4:hover {
+    width: 300px;
+}
+
+.transition5 {
+    transition: all 2s ease-out;
+}
+
+.transition5:hover {
+    width: 300px;
+    background-color: aqua;
+    font-size: 3rem;
+    border-radius: 20px;
+}
+
+/* Animation */
+
+.animation {
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    /* animation name / identifier für die keyframes */
+    animation-name: square;
+    /* animation duration / laufzeit der animation */
+    animation-duration: 8s;
+    /* wie oft soll die animation laufen */
+    animation-iteration-count: infinite;
+    /* geschwindigkeit der animation */
+    animation-timing-function: linear;
+}
+
+@keyframes square {
+    0% {
+        border-radius: 0px;
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        background-color: crimson;
+        /* transform: translateX(500px); */
+        border-radius: 25%;
+        transform: translate(400px, 0px) scale(0.5);
+    }
+
+
+    50% {
+        background-color: cyan;
+        /* transform: translateX(500px); */
+        /* transform: translateY(500px); */
+        border-radius: 50%;
+        transform: translate(400px, 400px)scale(1.2);
+    }
+
+    75% {
+        background-color: yellow;
+        transform: translateX(0px);
+        /* transform: translateY(250px); */
+        border-radius: 25%;
+        transform: translate(0, 400px)scale(0.5);
+    }
+
+    100% {
+        border-radius: 0%;
+        /* transform: translateX(0px);
+        transform: translateY(0px); */
+        transform: translate(0, 0) scale(1.2);
+        transform: rotatez(180deg);
+    }
+}
